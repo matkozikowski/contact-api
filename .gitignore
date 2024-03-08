@@ -1,0 +1,5 @@
+.idea
+
+# Ignore dynamics files created by docker
+docker/data/*
+docker/logs/*

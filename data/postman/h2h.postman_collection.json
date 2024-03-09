@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "4c492e6b-76a7-4b05-8923-ccc6bbbd614c",
+		"name": "h2h",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7569773",
+		"_collection_link": "https://gold-space-404109.postman.co/workspace/My-Workspace~7a045573-eb80-4590-8ee7-62f80cbacdfa/collection/7569773-4c492e6b-76a7-4b05-8923-ccc6bbbd614c?action=share&source=collection_link&creator=7569773"
+	},
+	"item": [
+		{
+			"name": "contact",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Test\",\n    \"surname\": \"Surname\",\n    \"email\": \"tst@local.lc\",\n    \"message\": \"Lorem ipsum dolor...\",\n    \"terms\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/contact/message",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"contact",
+								"message"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "messages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/contact/message",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"contact",
+								"message"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

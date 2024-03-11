@@ -9,6 +9,7 @@
         "php": ">=8.2",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "codeception/module-rest": "^3.3",
         "doctrine/dbal": "^3",
         "doctrine/doctrine-bundle": "^2.11",
         "doctrine/doctrine-migrations-bundle": "^3.3",
@@ -23,6 +24,7 @@
         "symfony/expression-language": "7.0.*",
         "symfony/flex": "^2",
         "symfony/framework-bundle": "7.0.*",
+        "symfony/http-client": "7.0.*",
         "symfony/lock": "7.0.*",
         "symfony/property-access": "7.0.*",
         "symfony/property-info": "7.0.*",
@@ -84,6 +86,10 @@
         }
     },
     "require-dev": {
+        "codeception/codeception": "^5.1",
+        "codeception/module-asserts": "^3.0",
+        "codeception/module-phpbrowser": "^3.0",
+        "codeception/module-symfony": "^3.3",
         "symfony/maker-bundle": "^1.55"
     }
 }

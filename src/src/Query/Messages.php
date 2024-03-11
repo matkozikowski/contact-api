@@ -13,7 +13,7 @@ class Messages
     {
     }
 
-    public function all()
+    public function all(): array
     {
         try {
             return $this->contactRepository->findAll();

@@ -44,6 +44,18 @@ services:
     volumes:
       - ./../src/:/var/www/html
 
+  selenium:
+    image: selenium/standalone-chrome:4
+    shm_size: 2gb
+    container_name: selenium
+    ports:
+      - "4444:4444"
+      - "7900:7900"
+    environment:
+      VNC_NO_PASSWORD: 1
+      SCREEN_WIDTH: 1920
+      SCREEN_HEIGHT: 1080
+
   nginx:
     container_name: h2h-tech_nginx
     image: nginx:alpine

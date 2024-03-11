@@ -14,3 +14,4 @@ pass: teste
 
 # Run tests
 - phpunit `php vendor/bin/codecept run Unit`
+- rest `php vendor/bin/codecept run Api`

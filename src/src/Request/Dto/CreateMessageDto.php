@@ -6,6 +6,7 @@ namespace App\Request\Dto;
 
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\Validator\Constraints\Type;
+use Symfony\Component\Validator\Constraints\Email;
 
 class CreateMessageDto
 {
@@ -19,6 +20,9 @@ class CreateMessageDto
     public readonly string $surname,
 
     #[NotBlank(message: 'Email is required.')]
+    #[Email(
+        message: 'The email {{ value }} is not a valid email.',
+    )]
     #[Type('string')]
     public readonly string $email,
 

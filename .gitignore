@@ -1,5 +1,6 @@
 .idea
 
 # Ignore dynamics files created by docker
-docker/data/*
+docker/data/database/data
+docker/data/pgadmin/*
 docker/logs/*

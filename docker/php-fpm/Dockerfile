@@ -81,8 +81,8 @@ COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 COPY ./php.ini ${PHP_INI_DIR}/conf.d/99-php.ini
 
 # Copy entrypoint
-#COPY ./entrypoint /usr/local/bin/docker-entrypoint
-#RUN chmod +x /usr/local/bin/docker-entrypoint
+# COPY ./entrypoint /usr/local/bin/docker-entrypoint
+# RUN chmod +x /usr/local/bin/docker-entrypoint
 
 # Workdir
 WORKDIR /var/www/html
@@ -91,4 +91,4 @@ WORKDIR /var/www/html
 EXPOSE 9000
 
 # Run entrypoint
-#CMD ["docker-entrypoint"]
+# CMD ["docker-entrypoint"]

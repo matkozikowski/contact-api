@@ -44,17 +44,17 @@ services:
     volumes:
       - ./../src/:/var/www/html
 
-  selenium:
-    image: selenium/standalone-chrome:4
-    shm_size: 2gb
-    container_name: selenium
-    ports:
-      - "4444:4444"
-      - "7900:7900"
-    environment:
-      VNC_NO_PASSWORD: 1
-      SCREEN_WIDTH: 1920
-      SCREEN_HEIGHT: 1080
+  # selenium:
+  #   image: selenium/standalone-chrome:4
+  #   shm_size: 2gb
+  #   container_name: selenium
+  #   ports:
+  #     - "4444:4444"
+  #     - "7900:7900"
+  #   environment:
+  #     VNC_NO_PASSWORD: 1
+  #     SCREEN_WIDTH: 1920
+  #     SCREEN_HEIGHT: 1080
 
   nginx:
     container_name: h2h-tech_nginx
@@ -78,13 +78,6 @@ services:
     networks:
       - postgres-db-network
 
-# volumes:
-#     postgres-db-volume:
-#         driver: local
-#         driver_opts:
-#             type: none
-#             o: bind
-#             device: ./db-data
 networks:
     postgres-db-network:
         driver: bridge
